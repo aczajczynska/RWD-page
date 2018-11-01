@@ -1,0 +1,27 @@
+.btn {
+    font-weight: bold;
+    border-radius: 6px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    padding: 20px 40px;
+
+}
+
+
+.btn-primary {
+    background: $color-blue;
+    color: #fff;
+}
+
+
+.btn-secondary {
+    background: $color-bg;
+    color: #444;
+}
+
+.btn-more {
+    background-color: $color-blue;
+    color: #fff;
+}

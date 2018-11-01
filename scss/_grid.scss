@@ -1,0 +1,33 @@
+$gap: 10px; //Odstęp między kolumnami 
+$bp: 980px; // od kiedy mają się el układać obok siebie 
+$columns: 12; // liczba kolumn grid
+
+
+.container {
+    padding-left: $gap;
+    padding-right: $gap;
+
+
+    .row {
+        margin-left: -$gap;
+        margin-right: -$gap;
+
+        [class*="col-"] {
+            padding-left: 2 * $gap;
+            padding-right: 2 * $gap;
+            box-sizing: border-box;
+            margin-bottom: 2 * $gap;
+        }
+
+        @media (min-width: $bp) {
+            display: flex;
+
+            @for $i from 1 through $columns {
+
+                .col-#{$i}-#{$columns} {
+                    width: (100 / $columns * $i) *1%;
+                }
+            }
+        }
+    }
+}

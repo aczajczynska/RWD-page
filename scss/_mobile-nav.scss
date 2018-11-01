@@ -1,0 +1,62 @@
+$mobileNavWidth : 300px;
+
+.mobile-page-nav-list {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: $mobileNavWidth;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+    list-style: none;
+    text-decoration: none;
+    box-shadow: 1px 0 3px rgba(#000000, 0.3), 5px 0 3px rgba(#000, 0.1);
+    display: none;
+
+}
+
+.mobile-page-nav-list li {
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-page-nav-list a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #444;
+    transition: 0.2s;
+}
+
+.mobile-page-nav-list a:hover {
+    background: #444;
+    color: #fff;
+}
+
+@media (max-width:980px) {
+
+    .mobile-page-nav-list {
+        display: block;
+        left: -$mobileNavWidth;
+        transition: 0.5s;
+
+    }
+
+    .all {
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-show {
+        .mobile-page-nav-list {
+            transform: translateX(100%); // przesunięcie w osi x o 100% czyli 300px w prawo;
+        }
+
+        .all {
+            transform: translateX(#{$mobileNavWidth});
+        }
+    }
+
+}
